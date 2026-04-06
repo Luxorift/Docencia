@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Kinetic Collector | Pokémon Premium Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#510017",
+                    "tertiary-fixed": "#fcc800",
+                    "outline": "#767777",
+                    "on-primary-fixed-variant": "#600000",
+                    "surface-tint": "#bb0100",
+                    "outline-variant": "#acadad",
+                    "surface-bright": "#f6f6f6",
+                    "surface": "#f6f6f6",
+                    "on-primary-fixed": "#000000",
+                    "on-secondary": "#f5f2f1",
+                    "on-tertiary-container": "#574300",
+                    "primary-fixed": "#ff7763",
+                    "on-tertiary": "#fff1d6",
+                    "primary-fixed-dim": "#ff5b47",
+                    "surface-container": "#e7e8e8",
+                    "on-background": "#2d2f2f",
+                    "surface-container-highest": "#dbdddd",
+                    "on-error": "#ffefef",
+                    "surface-variant": "#dbdddd",
+                    "surface-container-low": "#f0f1f1",
+                    "background": "#f6f6f6",
+                    "on-secondary-fixed": "#403f3f",
+                    "on-secondary-container": "#525151",
+                    "on-primary-container": "#4f0000",
+                    "error": "#b41340",
+                    "on-surface-variant": "#5a5c5c",
+                    "secondary-fixed-dim": "#d6d4d3",
+                    "error-dim": "#a70138",
+                    "primary-container": "#ff7763",
+                    "secondary-fixed": "#e5e2e1",
+                    "tertiary-container": "#fcc800",
+                    "primary-dim": "#a40100",
+                    "primary": "#bb0100",
+                    "secondary": "#5c5b5b",
+                    "inverse-surface": "#0c0f0f",
+                    "on-primary": "#ffefed",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#3f3000",
+                    "tertiary-dim": "#634d00",
+                    "inverse-primary": "#ff5540",
+                    "on-tertiary-fixed-variant": "#624c00",
+                    "tertiary": "#715800",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "secondary-dim": "#504f4f",
+                    "error-container": "#f74b6d",
+                    "tertiary-fixed-dim": "#ebbb00",
+                    "surface-dim": "#d3d5d5",
+                    "surface-container-high": "#e1e3e3",
+                    "secondary-container": "#e5e2e1",
+                    "on-surface": "#2d2f2f",
+                    "inverse-on-surface": "#9c9d9d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .asymmetric-break { transform: translateY(15%); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-background antialiased selection:bg-primary/20">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500">
+                The Kinetic Collector
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-red-700 dark:text-red-500 font-bold border-b-2 border-red-700 pb-1" href="#">Inicio</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-red-600 transition-colors" href="#">Pokédex</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-red-600 transition-colors" href="#">Entrenadores</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-red-600 transition-colors" href="#">Comunidad</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-all duration-300">search</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-sm hover:opacity-80 transition-all duration-300 scale-95 md:scale-100 active:scale-95">
+                    Sign In
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 lg:px-16 pt-12 pb-32 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 z-10 text-center lg:text-left">
+<span class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                        Premium Digital Gallery
+                    </span>
+<h1 class="text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-on-background mb-8">
+                        The Kinetic <br/>
+<span class="text-primary italic">Collector.</span>
+</h1>
+<p class="text-on-surface-variant text-lg lg:text-xl max-w-xl mb-10 font-medium">
+                        Eleva tu pasión. Descubre una experiencia editorial diseñada para los maestros Pokémon que buscan la excelencia visual y técnica.
+                    </p>
+<div class="relative max-w-lg mx-auto lg:mx-0">
+<div class="flex items-center bg-surface-container-high p-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined px-4 text-primary">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-medium placeholder:text-outline" placeholder="Busca tu Pokémon por nombre o ID..." type="text"/>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold transition-transform hover:scale-105 active:scale-95">
+                                Explorar
+                            </button>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="relative w-full aspect-square max-w-2xl mx-auto">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-[100px] animate-pulse"></div>
+<img alt="Charizard dynamic action pose" class="w-full h-full object-contain drop-shadow-2xl z-20 asymmetric-break" data-alt="Stunning 3D high-resolution render of a fiery Charizard in a dynamic flight pose, glowing orange wings against a minimal studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbZQV7DhofFLpBjHcsl_Tllpb-gHFoXmhpD0IHkgy9lRyakX6eo8t9ImK_w5PYdlQMG6SouVF8NT1Y2AV98u-G11w1zB3G6sqtzaTJEaXLCreFdpcjisO-C0PWyVEWlu-SWYw6hnqXDFpQovCyh-GrY7KJmCAAc1pcjbWVU8CWmZ3ajbCrKxSx15_IJ7SdzKeQ1CNBsIJEOQyRrXEEovXsBMwMXtl3e4AQgcmjXDAwncQgzdhfDG6XjhVvaVoMk5mfzwH7YkbvouY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Gallery (Bento Grid) -->
+<section class="px-8 lg:px-16 py-24 bg-surface-container-low rounded-t-[3rem] lg:rounded-t-[5rem]">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-4xl lg:text-5xl font-black tracking-tight text-on-background">Pokémon Destacados</h2>
+<p class="text-on-surface-variant mt-2 text-lg">Selección curada de la temporada competitiva.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                        Ver galería completa
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Featured Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-8 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(45,47,47,0.06)] overflow-visible">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-sm font-bold text-primary uppercase tracking-widest">Electric Type</span>
+<h3 class="text-3xl font-black tracking-tighter mt-1">Raichu</h3>
+</div>
+<span class="text-2xl font-bold text-outline-variant">#0026</span>
+</div>
+<div class="relative h-64 mb-6">
+<img alt="Raichu art" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 z-10 relative" data-alt="Detailed artistic representation of a Raichu generating sparks of electricity, high-end digital illustration with soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXH40tG6RKafACf_6t78STMfOwd3eWbZcrC87nSlR2TsaNWVqxFJ8H1lGXsRpWmu1ysdLLi88IztFkZQ_X5BPiibVlkdSS0-RliVRHBqNOUCI72T34k019khAPgQsVQKV7araDNmjxFXUbLRqxW2cXFglsZB6dW6sS0MUIAaiGg0VYC817MdMENpLBJME-IG6m65k0ixapphWgswABrdfW_NnYfPpGpE0C9unkuO8hiMEwmZdiqGg-qDXLDxuB_ESGNoWyX49Rykk"/>
+</div>
+<div class="bg-surface-container-low rounded-lg p-4 flex justify-between items-center">
+<div class="text-center">
+<p class="text-xs text-outline font-bold uppercase">Ataque</p>
+<p class="text-xl font-black text-on-surface">90</p>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="text-center">
+<p class="text-xs text-outline font-bold uppercase">Defensa</p>
+<p class="text-xl font-black text-on-surface">55</p>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="text-center">
+<p class="text-xs text-outline font-bold uppercase">Velocidad</p>
+<p class="text-xl font-black text-on-surface">110</p>
+</div>
+</div>
+</div>
+<!-- Featured Card 2 (Highlight) -->
+<div class="lg:row-span-2 group relative bg-primary rounded-xl p-8 overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<span class="text-6xl font-black text-white/10 tracking-tighter">ULTRA</span>
+</div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<span class="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-bold uppercase tracking-wider">Legendary</span>
+<h3 class="text-5xl font-black tracking-tighter text-white mt-4 leading-none">Lugia</h3>
+<p class="text-white/80 mt-4 max-w-[200px] font-medium leading-relaxed">El guardián de los mares emerge con un poder inigualable.</p>
+</div>
+<div class="relative h-80">
+<img alt="Lugia aesthetic" class="w-full h-full object-contain scale-125 group-hover:scale-150 transition-transform duration-700" data-alt="Epic cinematic depiction of Lugia soaring through a dark stormy sky with lightning, masterwork digital painting style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH6dDlPDwZygYQU0OWJSv2r21d9stpMbe0JIDXPAk70BLVr1p9BSodkLNPh0LhmVr_3-bJKiWYicLjnCX_-bFBwY8aegySMsTqRpTb5Hrd7-mioKemGhFGJyuTZJLl4ewnbv3yH9n5aatvdFIe1FyvytvEIO2eyzqSBPAz035-54RpLlAYV9cs1-yPzY2jrsEPZjOYzloMplqLy-UHWP5YfSQ7WnhEk3Gcoegm0vnpKpiCGecxgDe3C6WMVXIVaS4XKZn2D9tnlpQ"/>
+</div>
+<button class="w-full bg-white text-primary py-4 rounded-full font-bold text-lg hover:bg-on-primary transition-colors">
+                                Adquirir Carta
+                            </button>
+</div>
+</div>
+<!-- Featured Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-8 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(45,47,47,0.06)] overflow-visible">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-sm font-bold text-tertiary uppercase tracking-widest">Ground Type</span>
+<h3 class="text-3xl font-black tracking-tighter mt-1">Lucario</h3>
+</div>
+<span class="text-2xl font-bold text-outline-variant">#0448</span>
+</div>
+<div class="relative h-64 mb-6">
+<img alt="Lucario dynamic" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 z-10 relative" data-alt="Stylized action pose of Lucario focusing aura energy between paws, blue energy spheres, professional game concept art style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9JnlnhubEiqMK1fpwzwCEsoQ13f1IJrFbTHRIcSiC-MJww_S9Q2lIxjyphVvwY7DU12X1AY2wgVf87aDABj9SY5eM_HUpOl0xti8InvrvgYjwdPQzkU97h4MAjdEoQ_UTZbIRkRoG8KbaYibxE5Wkj9mapAKZhHCLFBI7Oj9GYLCcKsZb9AuP2BNUe_zAyK1A-zsbcBWBsOIDSDEs3suzBp4RKOJ-2Fn-ACbzWFNztx9FMRL2N-Wakg9YtPzsYjnPQmSoXdIGjPg"/>
+</div>
+<div class="bg-surface-container-low rounded-lg p-4 flex justify-between items-center">
+<div class="text-center">
+<p class="text-xs text-outline font-bold uppercase">Aura</p>
+<p class="text-xl font-black text-on-surface">115</p>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="text-center">
+<p class="text-xs text-outline font-bold uppercase">Combate</p>
+<p class="text-xl font-black text-on-surface">110</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Legendary Trainers Section -->
+<section class="px-8 lg:px-16 py-32 bg-surface">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-5xl lg:text-6xl font-black tracking-tighter text-on-background mb-4">Entrenadores Legendarios</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Conoce a los líderes de la comunidad que están redefiniendo el coleccionismo digital.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Trainer 1 -->
+<div class="flex flex-col items-center group">
+<div class="w-48 h-48 rounded-full overflow-hidden p-1.5 bg-gradient-to-tr from-primary to-tertiary mb-6">
+<img alt="Trainer portrait 1" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500" data-alt="Professional portrait of a young male trainer with a confident smile, modern street style clothing, soft urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDov_I511j-KhNryfaxwbTcFaxmGbVsCJBDdTjG0xIe7isGfacf3UD7tn1FXlK6sF7E1gzN8SXdDfzBI3ob1VqB5aN0vcODV3bAj-ZoFuPbeVPF0Hz6D0HyE79M12CAlRJrR6qHmCzH7-YBMBSaVNo-OhSbdQwtdXf_WTcgy16sZ4z_zHITYFYG4fOOB7R3w1W8jwHNIbHrBIvaKO-1UdMw6yaNHwuTicQAEGPGJsY1auBysh_e2Hl-xMi37BH76q0smi8EkgqIUJc"/>
+</div>
+<h4 class="text-xl font-black text-on-background">Cynthia Grey</h4>
+<p class="text-primary font-bold text-sm uppercase tracking-widest mt-1">Master League</p>
+<div class="flex gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">850 POKÉMON</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">RANK #12</span>
+</div>
+</div>
+<!-- Trainer 2 -->
+<div class="flex flex-col items-center group">
+<div class="w-48 h-48 rounded-full overflow-hidden p-1.5 bg-gradient-to-tr from-primary to-secondary mb-6">
+<img alt="Trainer portrait 2" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500" data-alt="Close-up portrait of a female trainer with colored hair, wearing tactical gear, intense look, high-fashion aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYcpvYVO29LA4s1u0e14A9nLo7lRbZNY2iIZNE6eVygHhNrz9Gyg3Q_UZDwNHbCNafifalbBQjH1Ei70JLHG0kY6SiHmg0-xY8cjhrmXSQER_Bv1GavD7XpWtOmDKuJ2PbCyeNzOLkeu6r7eT5ivEB-8bCb5tUi3IoyID7JJQz8h7r5laRRYCfp0Q_xiWUxzXKxXimOeTzKXpLUTNPOA6dHFBv17Uc6E3l07ObLU2m92COhcV4CQ4-CR5NNTI5mW_9PO04lSAqJJ0"/>
+</div>
+<h4 class="text-xl font-black text-on-background">Kaito Sato</h4>
+<p class="text-primary font-bold text-sm uppercase tracking-widest mt-1">Elite Four</p>
+<div class="flex gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">1.2K POKÉMON</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">RANK #03</span>
+</div>
+</div>
+<!-- Trainer 3 -->
+<div class="flex flex-col items-center group">
+<div class="w-48 h-48 rounded-full overflow-hidden p-1.5 bg-gradient-to-tr from-primary-container to-primary mb-6">
+<img alt="Trainer portrait 3" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of a mature male trainer with glasses and a friendly face, wearing a lab coat style jacket, scientific vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy5nwvjduIZFqX-TcWNT0Jyd7y-cVTOI_qbTMMFe_9KjYkdQFAsJPDNrpcl-2n8tmQdrRZLAWaV425JlQd13uUFgCkAUqx1W8zRnOIcnvMoFfXYgME5T-7RrbgiINd-1QQdWVFrh_mYoVFqoZUByeiVJKca_w34Z9exbEjtAeB-m8LD5KzR5qDKdnPK-jj2aLQ_zdvnp6SuAyGEsYCL32TnAiZA6Idr6mOEYcdvNxvJ5CV-hm3Vr6D5VQj9DNJeOzk6H_fEYVE1zM"/>
+</div>
+<h4 class="text-xl font-black text-on-background">Prof. Aris</h4>
+<p class="text-primary font-bold text-sm uppercase tracking-widest mt-1">Legendary Researcher</p>
+<div class="flex gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">940 POKÉMON</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">RANK #08</span>
+</div>
+</div>
+<!-- Trainer 4 -->
+<div class="flex flex-col items-center group">
+<div class="w-48 h-48 rounded-full overflow-hidden p-1.5 bg-gradient-to-tr from-secondary to-tertiary mb-6">
+<img alt="Trainer portrait 4" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500" data-alt="Young female trainer with a headset, professional gamer aesthetic, glowing neon lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxOiYikut07PG3sydlgJ94LhPhdSEyAe8HGJ306fsLntq6kZksFPHxtGVWcdowVFPIGJUQCnlxDGwche_XzKzJUU2-ClJZEPg3V8W5rRXQgivdS9e4UpTAbwlUNMY0c4iJMTEmgrVmt5SwLrkA9xDj2vfc-y8rmsDU1THeW4kZugc0aSA_6Aa4oDipj-2KuzyR5orRh4j0ZwR4IwX-Opi733cU1beD80I3dEVruj5CFEYlzIt2zKcXoiDVna3uDUtMUD25Y9TIchs"/>
+</div>
+<h4 class="text-xl font-black text-on-background">Hana Bloom</h4>
+<p class="text-primary font-bold text-sm uppercase tracking-widest mt-1">Gym Leader</p>
+<div class="flex gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">620 POKÉMON</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold">RANK #24</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-8 lg:px-16 pb-24">
+<div class="max-w-screen-2xl mx-auto">
+<div class="relative rounded-[3rem] overflow-hidden bg-zinc-900 px-12 py-20 text-center">
+<div class="absolute inset-0 opacity-20">
+<img alt="Pokeball background" class="w-full h-full object-cover" data-alt="Close-up artistic shot of a sleek modern Pokeball with red glowing lights in a dark futuristic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAXwXZOUTCeTYX87piOE4BIe4h8gdrxlU1BhpKKZqrvL4N5kvw6v4c-tEKL7QzNrRf_k2vGtDp39KYsIJAOrtSH7IbTjZ-jivc-NuKvL_5UWQI67RPlqNdxVF5yaJwQJ9sEYVGVKrpuroLefeMfEOf_7uhk2TSC0k2Xbcrgs3a8s0HDHTgETzQ0z4IUbccFmA8BayZ5pjr-QM1qB94Qcu7kdTkRYJjqti5ZmwkNolReKgMjbCiixlnGFFPRs2PxkETXMsaLjYHmtg"/>
+</div>
+<div class="relative z-10">
+<h2 class="text-5xl lg:text-7xl font-black tracking-tighter text-white mb-6 uppercase">Unirse a la Liga</h2>
+<p class="text-zinc-400 text-xl max-w-2xl mx-auto mb-12 font-medium">
+                            Acceso anticipado a cartas de edición limitada, eventos mundiales y estadísticas de nivel profesional.
+                        </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-12 py-5 rounded-full font-black text-lg hover:bg-primary-container transition-all active:scale-95">
+                                REGISTRARSE AHORA
+                            </button>
+<button class="bg-white/10 text-white backdrop-blur-md border border-white/20 px-12 py-5 rounded-full font-black text-lg hover:bg-white/20 transition-all active:scale-95">
+                                VER BENEFICIOS
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-zinc-50 dark:bg-zinc-900">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6">
+<div class="text-lg font-bold text-zinc-900 dark:text-white">
+                The Kinetic Collector
+            </div>
+<div class="flex gap-8 text-sm font-medium text-zinc-500 dark:text-zinc-400">
+<a class="hover:text-red-500 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-red-500 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-red-500 transition-colors" href="#">Cookies</a>
+<a class="hover:text-red-500 transition-colors" href="#">Contact</a>
+</div>
+<div class="text-zinc-500 dark:text-zinc-400 text-sm">
+                © 2024 The Kinetic Collector. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
